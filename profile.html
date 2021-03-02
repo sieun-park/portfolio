@@ -84,40 +84,15 @@
             color: #fff;
         }
 
+        .skill-title{
+          background-color: lightgray;
+        }
+        .skill-title2{
+          text-align: center;
+          font-size: 40px;
+        }
 
-
-         .skill{
-             background-color: lightgrey;
-             font-size: 30px;
-             text-align: center;
-         }
-         .s1{
-             width: 150px;
-             height: 150px;
-             position:relative;
-             top: 40px;
-             right:150px;
-         }
-         .s2{
-            width: 130px;
-             height: 150px;
-             position: relative;
-             top:40px;
-             left:50px;
-         }
-         .s3{
-            width: 150px;
-            height: 150px;
-            position: relative;
-            top:40px;
-            left: 250px;
-         }
-         .s4{
-             width:150px;
-             height:150px;
-             position:relative;
-             top: 200px;
-         }
+        
          .skill{
              display: grid;
              height: 100%;
@@ -136,17 +111,59 @@
          .skill-bars .bar:first-child{
            margin-top:0px;
          }
+         .skill-bars .bar .info{
+           margin-bottom: 5px;
+         }
+
          .skill-bars .bar .info span{
            font-size: 17px;
            font-weight: 500;
          }
-         .skill-bars  .bar .progress-line{
+         .progress-line span::before{
+           position:absolute;
+           content: "";
+           right:0;
+           top:-10px;
+           height: 0;
+           width: 0;
+           border: 7px solid transparent;
+           border-bottom-width: 0px;
+           border-right-width: 0px;
+           border-top-color: #000;
+         }
+         .progress-line span::after{
+           position:absolute;
+           right:0;
+           top:-28px;
+           color:#fff;
+           font-size: 12px;
+           font-weight: 500;
+           background: #000;
+           padding: 1px 8px;
+           border-radius: 3px;           
+         }         
+         .progress-line.h span::after{
+           content:"60%";
+         }
+         .progress-line.css span::after{
+           content:"60%";
+         }
+         .progress-line.javascript span::after{
+           content:"50%";
+         }
+         .progress-line.python span::after{
+           content:"70%";
+         }
+         .skill-bars .bar .progress-line{
            position: relative;
            height: 10px;
            width: 100%;
            background: #f0f0f0;
+           border-radius: 10px;
+           transform: scale(0);
            box-shadow: inset 0px 1px 1px rgba(0,0,0,0.05),
                              0px 1px rgba(255,255,255,0.8),
+           animation: animate 1s cubic-bezier(1,0,0.5,1):
          }
          .bar .progress-line span{
            height: 100%;
@@ -154,8 +171,26 @@
            background: grey;
            position: absolute;
            border-radius: 10px;
-           float:left;
+           left:-1px;
          }
+         @keyframes animate {
+           100%{
+            transform: scale(1);   
+           }
+         }
+         .progress-line.h span{
+           width:60%;
+         }
+         .progress-line.css span{
+           width:60%;
+         }
+         .progress-line.javascript span{
+           width:50%;
+         }
+         .progress-line.python span{
+           width:70%;
+         }
+
 
 
 
@@ -213,43 +248,47 @@
 
     </div>
 <!--skills-->
-<div class=skill>
-<div class="skill-bars">
-    <div class="bar">
-      <div class="skill-detail">
-        <span>HTML</span>
-      </div>
-      <div class="progress-line h">
-        <span></span>
-      </div>
-    </div>
-    <div class="bar">
-      <div class="skill-detail">
-        <span>CSS</span>
-      </div>
-      <div class="progress-line css">
-        <span></span>
-      </div>
-    </div>
-    <div class="bar">
-      <div class="skill-detail">
-        <span>javascript</span>
-      </div>
-      <div class="progress-line jquery">
-        <span></span>
-      </div>
-    </div>
-    <div class="bar">
-      <div class="skill-detail">
-        <span>Python</span>
-      </div>
-      <div class="progress-line python">
-        <span></span>
-      </div>
-    </div>
-</div>
+<div class="skill-title">
+  <p class="skill-title2">skills</p>
 
+
+  <div class="skill">
+    <div class="skill-bars">
+        <div class="bar">
+          <div class="skill-detail">
+            <span>HTML</span>
+          </div>
+          <div class="progress-line h">
+            <span></span>
+          </div>
+        </div>
+        <div class="bar"> 
+          <div class="skill-detail">
+            <span>CSS</span>
+          </div>
+          <div class="progress-line css">
+            <span></span>
+          </div>
+        </div>
+        <div class="bar">
+          <div class="skill-detail">
+            <span>Javascript</span>
+          </div>
+          <div class="progress-line javascript">
+            <span></span>
+          </div>
+        </div>
+        <div class="bar">
+          <div class="skill-detail">
+            <span>Python</span>
+          </div>
+          <div class="progress-line python">
+            <span></span>
+          </div>
+        </div>
+    </div>
   </div>
+</div>
 
 
 
