@@ -221,6 +221,7 @@
          .progress-line.python span{
            width:70%;
          }
+
         /*work*/
         .work{
           display: flex;
@@ -253,6 +254,65 @@
        .gallery .image:hover img{
          transform: scale(1.1);
        }
+       @media (max-width:1000px){
+        .gallery .image{
+          width: calc(100%/2);
+        }  
+       }
+       @media (max-width:600px){
+         .gallery .image{
+           padding: 4px;
+           width:100%;
+         }
+       }
+       .preview-box{
+         position: fixed;
+         max-width: 700px;
+         width:100%;
+         top:50%;
+         left:50%;
+         transform: translate(-50%, -50%);
+         background: #fff;
+         padding: 0 5px 5px 5px;
+         border-radius: 3px;
+         box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+       }
+       .preview-box .d-details{
+         display: flex;
+         align-items: center;
+         padding: 12px 15px 12px 10px;
+         justify-content: space-between;
+       }
+       .d-details .d-title{
+         display: flex;
+         font-size: 18px;
+         font-weight: 400;
+       }
+       .d-details .d-title p{
+         margin: 0 5px;
+       }
+       .d-details .d-title p.current-img{
+         font-weight: 500;
+       }
+       .preview-box .img-box{
+         display: flex;
+         width: 100%;
+       }
+       .img-box .slide{
+         position: absolute;
+         top: 50%;
+         transform: translateY(-50%);
+         font-size: 30px;
+         cursor: pointer;
+         color: #fff;
+       }
+      
+       .preview-box .img-box img{
+         width: 100%;
+         border-radius: 0 0 3px 3px;
+       }
+       
+
 
 
 
@@ -362,8 +422,32 @@
       <div class="image"><span><img src="imgfile/img5.jpeg" alt=""></span></div>
       <div class="image"><span><img src="imgfile/img6.jpg" alt=""></span></div>
     </div>
-
   </div>
+
+  <div class="preview-box">
+    <div class="d-details">
+      <span class="d-title">
+        Image <p classs="current-img">3</p>
+        of <p class="total-img">6</p>
+      </span>
+      <span class="icon fas fa-times"></span>
+    </div>
+    <div class="img-box">
+      <div class="slide prev">
+        <i class="fas fa-angle-left"></i>
+      </div>
+      <div class="slide next">
+        <i class="fas fa-angle-right"></i>
+      </div>
+      <img src="imgfile/img6.jpg" alt="">
+    </div>
+
+   
+  </div>
+  
+  
+
+
 </div>
   
 
