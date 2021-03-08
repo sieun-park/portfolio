@@ -1,10 +1,11 @@
-const gallery = document.querySelectorAll(".gallery .images"),
+const gallery = document.querySelectorAll(".gallery .image"),
 previewBox = document.querySelector(".preview-box");
 
 window.onload = ()=>{
     for (let i = 0; i < gallery.length; i++) {
-        console.log(i);
-
-        
+        gallery[i].onclick = ()=>{
+            console.log(i);
+            previewBox.classList.add("show");
+        }
     }
 }
