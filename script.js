@@ -7,10 +7,10 @@ window.onload = ()=>{
     for (let i = 0; i < gallery.length; i++) {
         let newIndex = i;
         gallery[i].onclick = ()=>{
-            console.log(i); 
+            console.log(i);
             function preview(){
                 let selectedImgUrl = gallery[i].querySelector("img").src;
-                previewImg.scr = selectedImgUrl;
+                previewImg.src = selectedImgUrl;
                 console.log(selectedImgUrl);
             }
             preview();
@@ -19,7 +19,7 @@ window.onload = ()=>{
                 previewBox.classList.remove("show");
 
             }
-        
+
         }
     }
 }
