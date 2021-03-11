@@ -15,16 +15,37 @@ window.onload = ()=>{
 
             const prevBtn = document.querySelector(".prev");
             const nextBtn = document.querySelector(".next");
+            if(newIndex == 0){
+                prevBtn.style.display = "none";
+            }
+            if(newIndex >= gallery.length - 1){
+                nextBtn.style.display = "none";
+            }
             prevBtn.onclick = ()=>{
                 newIndex--;
-                preview();
+                if(newIndex == 0){
+                    prevBtn.style.display = "none";
+
+                }else{
+                    preview();
+                }
             }
+            nextBtn.onclick = ()=>{
+                newIndex++;
+                if(newIndex >= gallery.length - 1){
+                    nextBtn.style.display = "none";
 
-
+                }else{
+                    preview();
+                }
+            }
 
             preview();
             previewBox.classList.add("show");
+
             closeIcon.onclick = ()=>{
+                prevBtn.style.display = "block";
+                nextBtn.style.display = "block";
                 previewBox.classList.remove("show");
 
             }
