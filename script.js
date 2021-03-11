@@ -9,7 +9,7 @@ window.onload = ()=>{
         gallery[i].onclick = ()=>{
             console.log(i);
             function preview(){
-                let selectedImgUrl = gallery[i].querySelector("img").src;
+                let selectedImgUrl = gallery[newIndex].querySelector("img").src;
                 previewImg.src = selectedImgUrl;
             }
 
