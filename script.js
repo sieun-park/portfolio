@@ -11,8 +11,17 @@ window.onload = ()=>{
             function preview(){
                 let selectedImgUrl = gallery[i].querySelector("img").src;
                 previewImg.src = selectedImgUrl;
-                console.log(selectedImgUrl);
             }
+
+            const prevBtn = document.querySelector(".prev");
+            const nextBtn = document.querySelector(".next");
+            prevBtn.onclick = ()=>{
+                newIndex--;
+                preview();
+            }
+
+
+
             preview();
             previewBox.classList.add("show");
             closeIcon.onclick = ()=>{
