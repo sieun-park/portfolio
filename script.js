@@ -11,10 +11,11 @@ window.onload = ()=>{
         let newIndex = i;
         let clickImgIndex;
         gallery[i].onclick = ()=>{
-            currentImg.textContent = newIndex;
+            
             clickImgIndex = newIndex;
             console.log(i);
             function preview(){
+                currentImg.textContent = newIndex + 1;
                 let selectedImgUrl = gallery[newIndex].querySelector("img").src;
                 previewImg.src = selectedImgUrl;
             }
