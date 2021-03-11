@@ -15,15 +15,15 @@ window.onload = ()=>{
 
             const prevBtn = document.querySelector(".prev");
             const nextBtn = document.querySelector(".next");
-            if(newIndex == 0){
+            if(newIndex >= 0){
                 prevBtn.style.display = "none";
             }
-            if(newIndex >= gallery.length - 1){
+            if(newIndex >= gallery.length){
                 nextBtn.style.display = "none";
             }
             prevBtn.onclick = ()=>{
                 newIndex--;
-                if(newIndex == 0){
+                if(newIndex >= 0){
                     prevBtn.style.display = "none";
 
                 }else{
@@ -32,7 +32,7 @@ window.onload = ()=>{
             }
             nextBtn.onclick = ()=>{
                 newIndex++;
-                if(newIndex >= gallery.length - 1){
+                if(newIndex >= gallery.length){
                     nextBtn.style.display = "none";
 
                 }else{
