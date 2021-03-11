@@ -15,7 +15,7 @@ window.onload = ()=>{
 
             const prevBtn = document.querySelector(".prev");
             const nextBtn = document.querySelector(".next");
-            if(newIndex >= 0){
+            if(newIndex == -1){
                 prevBtn.style.display = "none";
             }
             if(newIndex >= gallery.length){
@@ -23,7 +23,7 @@ window.onload = ()=>{
             }
             prevBtn.onclick = ()=>{
                 newIndex--;
-                if(newIndex >= 0){
+                if(newIndex == -1){
                     prevBtn.style.display = "none";
 
                 }else{
