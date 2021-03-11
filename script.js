@@ -11,6 +11,7 @@ window.onload = ()=>{
         let newIndex = i;
         let clickImgIndex;
         gallery[i].onclick = ()=>{
+            currentImg.textContent = newIndex;
             clickImgIndex = newIndex;
             console.log(i);
             function preview(){
