@@ -31,7 +31,7 @@ window.onload = ()=>{
             }
             prevBtn.onclick = ()=>{
                 newIndex--;
-                if(newIndex == -1){
+                if(newIndex == 0){
                     preview();
                     prevBtn.style.display = "none";
 
