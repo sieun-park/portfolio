@@ -23,7 +23,7 @@ window.onload = ()=>{
 
             const prevBtn = document.querySelector(".prev");
             const nextBtn = document.querySelector(".next");
-            if(newIndex == -1){
+            if(newIndex == 0){
                 prevBtn.style.display = "none";
             }
             if(newIndex >= gallery.length){
