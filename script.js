@@ -12,7 +12,7 @@ window.onload = ()=>{
         let newIndex = i;
         let clickImgIndex;
         gallery[i].onclick = ()=>{
-            
+
             clickImgIndex = newIndex;
             console.log(i);
             function preview(){
@@ -26,29 +26,27 @@ window.onload = ()=>{
             if(newIndex == 0){
                 prevBtn.style.display = "none";
             }
-            if(newIndex >= gallery.length){
+            if(newIndex >= gallery.length-1){
                 nextBtn.style.display = "none";
             }
             prevBtn.onclick = ()=>{
                 newIndex--;
                 if(newIndex == 0){
-                    preview();
                     prevBtn.style.display = "none";
-
                 }else{
-                    preview();
                     nextBtn.style.display = "block";
                 }
+                preview();
             }
             nextBtn.onclick = ()=>{
                 newIndex++;
-                if(newIndex >= gallery.length){
+                if(newIndex >= gallery.length - 1){
                     nextBtn.style.display = "none";
-
                 }else{
-                    preview();
                     prevBtn.style.display = "block";
                 }
+                preview();
+
             }
 
             preview();
