@@ -67,3 +67,14 @@ window.onload = ()=>{
         }
     }
 }
+
+const navbarToggler = document.querySelector(".navbar-toggler");
+const navbarMenu = documenr.querySelector(".navbar ul");
+
+navbarToggler.addEventListener("click", navbarTogglerClick);
+
+function navbarTogglerClick(){
+    navbarToggler.classList.toggle("open-navber-toggler");
+    navbarMenu.classList.toggle("open");
+}
+  
