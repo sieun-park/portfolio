@@ -69,7 +69,7 @@ window.onload = ()=>{
 }
 
 const navbarToggler = document.querySelector(".navbar-toggler");
-const navbarMenu = documenr.querySelector(".navbar ul");
+const navbarMenu = document.querySelector(".navbar ul");
 
 navbarToggler.addEventListener("click", navbarTogglerClick);
 
