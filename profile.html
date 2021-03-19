@@ -117,7 +117,8 @@
             background-color: transparent;
             color: #fff;
             border: 3px solid #fff;
-            border: none;
+            /*border: none;*/
+            /*border-radius: 4px;*/
             outline: none;
             padding: 0 5px;
             cursor: pointer;
@@ -144,12 +145,15 @@
           .navbar .navbar-toggler.open-navber-toggler span{
             /*transform: rotate(90deg);*/
             background-color: transparent;
+            /*transform: scale(0.85) rotate(270deg);*/
           }
           .navbar .navbar-toggler.open-navber-toggler span::before{
             transform: translateY(0px) rotate(45deg);
+            /*transform: translateY(0px) scale(0.75) rotate(45deg);*/
           }
           .navbar .navbar-toggler.open-navber-toggler span::after{
             transform: translateY(-3px) rotate(-45deg);
+            /*transform: translateY(-3px) scale(0.75) rotate(-45deg);*/
           }
 
         }
@@ -496,8 +500,8 @@
         <nav class="navbar">
           <ul>
             <li><a href="#">profile</a></li>
-            <li><a href="#">skills</a></li>
-            <li><a href="#">works</a></li>
+            <li><a href="#skillpart">skills</a></li>
+            <li><a href="#workpart">works</a></li>
           </ul>
           <button class="navbar-toggler">
             <span></span>
@@ -533,7 +537,7 @@
 
     </div>
 <!--skills-->
-  <div class="skill-title">
+  <div id="skillpart" class="skill-title">
     <p class="skill-title2">skills</p>
 
 
@@ -575,9 +579,9 @@
     </div>
   </div>
 <!--work-->
-  <div class="work-title">
+  <div id="workpart" class="work-title">
     <p class="work-title2">work</p>
-    <div class="work">
+    <div  class="work">
       <div class="wrapper">
         <div class="gallery">
           <div class="image"><span><img src="imgfile/img1.jpg" alt=""></span></div>
